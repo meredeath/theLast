@@ -1,0 +1,11 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+
+int main(){
+  struct stat randbuggy;
+  stat("/dev/random", &randbuggy);
+  
+  //printf("Printing file size: %d\n",randbuggy.st_size);
+  return 0;
+}
